@@ -16,7 +16,7 @@ function setInputFilter(textbox, inputFilter) {
     });
 }
 $(document).on("keydown", ".Input", function() {
-    setInputFilter(this, function(value) { return /^\d*$/.test(value) && (value === '' || parseInt(value) > 0 && parseInt(value) <= 9); });
+    setInputFilter(this, function(value) { return /^\d*$/.test(value) && (value === '' || parseInt(value) > 0 && parseInt(value) <= 4); });
 });
 let newgame = "true";
 
@@ -49,19 +49,14 @@ function checkBlank(row, c) {
 }
 cell = []
 var c,
-    list = ["A", "B", "C", "D", "E", "F", "G", "H", "I"],
+    list = ["A", "B", "C", "D"],
     row1 = [],
     row2 = [],
     row3 = [],
-    row4 = [],
-    row5 = [],
-    row6 = [],
-    row7 = [],
-    row8 = [],
-    row9 = [];
+    row4 = [];
 
 for (i in list) {
-    for (j = 1; j <= 9; j++) {
+    for (j = 1; j <= 4; j++) {
         c = '#cell_' + list[i] + j;
         cell.push(c)
         if (list[i] == "A") {
@@ -72,16 +67,6 @@ for (i in list) {
             checkBlank(row3, c);
         } else if (list[i] == "D") {
             checkBlank(row4, c);
-        } else if (list[i] == "E") {
-            checkBlank(row5, c);
-        } else if (list[i] == "F") {
-            checkBlank(row6, c);
-        } else if (list[i] == "G") {
-            checkBlank(row7, c);
-        } else if (list[i] == "H") {
-            checkBlank(row8, c);
-        } else if (list[i] == "I") {
-            checkBlank(row9, c);
         }
 
     };
@@ -93,7 +78,7 @@ $(document).on("click", "#newGame", function() {
     $("#loader").css({ "display": "block" })
 
 
-    for (i = 0; i < 81; i++) {
+    for (i = 0; i < 16; i++) {
         a = $(".Input")[i]
         $(a).addClass("pause")
 
@@ -130,7 +115,7 @@ $(document).on("click", "#newGame", function() {
         };
 
         $("#loader").css({ "display": "none    " })
-        for (i = 0; i < 81; i++) {
+        for (i = 0; i < 16; i++) {
             a = $(".Input")[i]
             $(a).removeClass("pause")
 
@@ -144,19 +129,14 @@ $(document).on("click", "#newGame", function() {
 const buildCurrentBoard = function() {
     cell = []
     var c,
-        list = ["A", "B", "C", "D", "E", "F", "G", "H", "I"],
+        list = ["A", "B", "C", "D"],
         row1 = [],
         row2 = [],
         row3 = [],
-        row4 = [],
-        row5 = [],
-        row6 = [],
-        row7 = [],
-        row8 = [],
-        row9 = [];
+        row4 = [];
 
     for (i in list) {
-        for (j = 1; j <= 9; j++) {
+        for (j = 1; j <= 4; j++) {
             c = '#cell_' + list[i] + j;
             cell.push(c)
             if (list[i] == "A") {
@@ -167,16 +147,6 @@ const buildCurrentBoard = function() {
                 checkBlank(row3, c);
             } else if (list[i] == "D") {
                 checkBlank(row4, c);
-            } else if (list[i] == "E") {
-                checkBlank(row5, c);
-            } else if (list[i] == "F") {
-                checkBlank(row6, c);
-            } else if (list[i] == "G") {
-                checkBlank(row7, c);
-            } else if (list[i] == "H") {
-                checkBlank(row8, c);
-            } else if (list[i] == "I") {
-                checkBlank(row9, c);
             }
 
         };
@@ -187,11 +157,6 @@ const buildCurrentBoard = function() {
         row2: JSON.stringify(row2),
         row3: JSON.stringify(row3),
         row4: JSON.stringify(row4),
-        row5: JSON.stringify(row5),
-        row6: JSON.stringify(row6),
-        row7: JSON.stringify(row7),
-        row8: JSON.stringify(row8),
-        row9: JSON.stringify(row9),
     }
 }
 
@@ -263,7 +228,6 @@ $(document).on("focus", ".Input", function() {
 
     $("." + classlist[1]).addClass("active");
     $("." + classlist[2]).addClass("active");
-    $("." + classlist[3]).addClass("active");
     $(this).addClass("focused")
 
 
@@ -275,7 +239,6 @@ $(document).on("blur", ".Input", function() {
 
     $("." + classlist[0]).removeClass("active");
     $("." + classlist[1]).removeClass("active");
-    $("." + classlist[2]).removeClass("active");
     $(this).removeClass("focused")
 });
 const divs = document.getElementsByTagName("input")

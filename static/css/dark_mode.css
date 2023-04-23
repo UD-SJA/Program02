@@ -1,27 +1,23 @@
 .dark-mode {
-    background-color: black;
-    color: white;
+    background-color: rgb(58, 58, 58);
+    color: rgb(0, 0, 0);
     }
     .dark-mode #newGame {
-        background-color: white;
+        background-color: rgb(210, 225, 255);
     }
     .dark-mode #pause{
-        background-color: white;
+        background-color: rgb(210, 225, 255);
     }
     .dark-mode #check{
-        background-color: white;
+        background-color: rgb(210, 225, 255);
     }
     .dark-mode #levelstatus{
-        background-color: white;
+        background-color: rgb(210, 225, 255);
     }
     .dark-mode #try{
         color: black;
     }
-    .dark-mode td{
-        border: 1px solid black;
-        color:black;
-        
-    }
+
     .dark-mode .Input:hover {
         background-color: rgb(221, 238, 255);
         outline: 0;
@@ -30,10 +26,10 @@
         background-color: #ccc;
     }
     .dark-mode #toggle-button{
-        background-color:white;
+        background-color:rgb(210, 225, 255);
     }
     .dark-mode #submitSolution{
-        background-color: white;
+        background-color: rgb(210, 225, 255);
     }
     .dark-mode #modal-result-message{
         color: black;
