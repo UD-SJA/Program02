@@ -23,3 +23,4 @@ Your browser should be opened and show the website of Sudoku.
 [1] Aimacode. (n.d.). Aimacode/aima-python: Python implementation of algorithms from Russell and Norvig's "artificial intelligence - A modern approach". GitHub. Retrieved from https://github.com/aimacode/aima-python 
 
 [2] Nktech-Official. (n.d.). Nktech-Official/Sudoku-web-game-flask: Sudoku web app is a legacy Sudoku game on the internet running in your browser. The sole purpose of this game is to just check my HTML JS and flask routing skills. This app is deployed on Heroku here: https://sudoku-web-game.herokuapp.com/. GitHub. Retrieved from https://github.com/Nktech-Official/Sudoku-Web-Game-flask
+
