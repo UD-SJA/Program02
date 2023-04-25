@@ -113,10 +113,10 @@ initial_grid = [
 sudoku = Sudoku(initial_grid)
 (solution, backtracks_count) = sudoku.solve()
 
-print("Variables:", sudoku.variables)
-print("Domains:", sudoku.domains)
-print("Constraints:", sudoku.constraints)
 print("\nSolution:")
 sudoku.print_solution(solution)
-print("\nBacktracks count:")
-print(backtracks_count)
+print("\nVariables:\n", sudoku.variables)
+print("\nDomains:\n", sudoku.domains)
+print("\nConstraints:\n", sudoku.constraints)
+print("\nBacktracks count:\n",backtracks_count)
+
