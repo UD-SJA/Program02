@@ -13,8 +13,6 @@ In the Visual Studio code's terminal, write:
 
 python app.py
 
-Then select flask.
-
 After that, navigate to the link http://127.0.0.1:5000/ and press ctrl + click.
 
 Your browser should be opened and show the website of Sudoku.
