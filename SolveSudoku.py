@@ -113,12 +113,15 @@ initial_grid = [
 sudoku = Sudoku(initial_grid)
 (solution, backtracks_count) = sudoku.solve()
 
-print("Solution:")
+
+print("\nSolution:")
 sudoku.printing(solution)
+
 print("\nVariables:\n", sudoku.variables)
 print("\nDomains:\n", sudoku.domains)
 print("\nConstraints:\n", sudoku.constraints)
 print("\nBacktracks count:\n",backtracks_count)
+
 
 xi = (0, 1)  # Choose a specific variable xi
 xj = (0, 2)  # Choose a specific variable xj

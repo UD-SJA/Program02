@@ -1,22 +1,24 @@
-## _Sudoku Web App_
- The Sudoku web app is a legacy sudoku game on the internet running in your browser.
- The sole purpose of this game is to just check my HTML, JavaScript and Flask routing skills. 
- This app is deployed on Heroku here:- https://sudoku-web-game.herokuapp.com/
-## _How to play Sudoku game:_
- I know almost 80% of you know how to play a sudoku game and the rest 20% can google it but just to fill this Readme file and also for those 20% people I will tell you how to play this game.
-    In this game, there is a grid of 81 (9x9) cells i.e 9 cells in a row and 9 cells in a column. Also, 9 subgrids contain 9 cells (3x3) each. There are some cells pre-filled (called hints) depending upon the level of difficulty.
-    Now we have to fill the grid with numbers 1-9 keeping in mind that no number can be repeated in a row, column & sub grid. In case you find this explanation difficult to understand, feel free to google it and read a better description!
+## To let this program work:
 
-## _Now let's Talk about code:_
- As the name suggests this web app or website is made with the help of Flask, a framework of python and you can see the percentage of language used on the GitHub Language used
-1. Python (Flask-Framework)
-2. HTML 
-3. JavaScript & jquery (ajax)
-4. Cascade Style Sheets (CSS) 
+First, install the below:
 
- - Python is used to generate the sudoku and solve it. 
- - Javascript and Jquery have been used to send data to the backend python server and show the result in the frontend.
- - CSS for styling.
+pip install -r requirements.txt
 
+`requirements.txt` has all packages that have been used. Also, make sure to spell `requirements.txt` and locate its place correctly.
 
-P.S:- I am open to collab so you can update the source code and put it on your repo or can send a pull request<BR> Just mail me at backend.nktechnical@gmail.com after making a request or you can report a bug.
+Run the command in your terminal or command prompt.
+
+## Second,
+In the Visual Studio code's terminal, write:
+
+python app.py
+
+After that, navigate to the link http://127.0.0.1:5000/ and press ctrl + click.
+
+Your browser should be opened and show the website of Sudoku.
+
+## References:
+[1] Aimacode. (n.d.). Aimacode/aima-python: Python implementation of algorithms from Russell and Norvig's "artificial intelligence - A modern approach". GitHub. Retrieved from https://github.com/aimacode/aima-python 
+
+[2] Nktech-Official. (n.d.). Nktech-Official/Sudoku-web-game-flask: Sudoku web app is a legacy Sudoku game on the internet running in your browser. The sole purpose of this game is to just check my HTML JS and flask routing skills. GitHub. Retrieved from https://github.com/Nktech-Official/Sudoku-Web-Game-flask
+
