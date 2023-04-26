@@ -89,14 +89,14 @@ class Sudoku:
                 failed_values[var].add(value)
                 backtracks_count[var] += 1
         return None, backtracks_count
-
+    
     def solve(self):
         assignment = {}
         self.ac3()
         solution, backtracks_count = self.backtrack(assignment)
         return solution, backtracks_count
 
-    def print_solution(self, solution):
+    def printing(self, solution):
         for i in range(self.size):
             row = []
             for j in range(self.size):
@@ -113,10 +113,21 @@ initial_grid = [
 sudoku = Sudoku(initial_grid)
 (solution, backtracks_count) = sudoku.solve()
 
-print("Variables:", sudoku.variables)
-print("Domains:", sudoku.domains)
-print("Constraints:", sudoku.constraints)
-print("\nSolution:")
-sudoku.print_solution(solution)
-print("\nBacktracks count:")
-print(backtracks_count)
+print("Solution:")
+sudoku.printing(solution)
+print("\nVariables:\n", sudoku.variables)
+print("\nDomains:\n", sudoku.domains)
+print("\nConstraints:\n", sudoku.constraints)
+print("\nBacktracks count:\n",backtracks_count)
+
+xi = (0, 1)  # Choose a specific variable xi
+xj = (0, 2)  # Choose a specific variable xj
+
+revised_result = sudoku.revise(xi, xj)
+
+print("Boolean result of the revise function:", revised_result)
+
+ac3_result = sudoku.ac3()
+
+
+print("\nAC3 Result:", ac3_result)  # Add this line to print the AC3 result
